@@ -5,6 +5,7 @@
  */
 package lexicalanalyzer;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -32,6 +33,17 @@ public class LexicalAnalyzer {
         System.out.println("SUDO LEXICAL ANALYZER: RESERVED WORDS");
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
+        char inputTok[];
+
+        ArrayList inputList = new ArrayList();
+
+        for(int i=0 ; i < input.length() ; i++){
+
+            while(input.charAt(i) != ' '){
+                //inputTok = input.charAt(i);
+            }
+
+        }
 
        System.out.println(IsReservedWord(input));
 
