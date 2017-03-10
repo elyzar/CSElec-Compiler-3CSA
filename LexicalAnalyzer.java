@@ -21,10 +21,51 @@ public class LexicalAnalyzer {
 
             return true;
         }else return false;
+        
+        
+        
+        /*
+        int number = 1;//number lang
+        int stored = 0;//na store sa array
+        
+        //nag bbilang ng space para masabi nya kung ilan laman ng array ganern
+        for (int x = 0; x < input.length();x++) {
+            if (input.charAt(x)== ' '){
+                number++;
+            }
+        }
+        
+        String[] all = new String[number];
+        for (int x = 0; x < input.length();x++ ) {
+            try{
+                if (input.charAt(x) == 'i' && (input.length()-x)>2 && input.charAt(x+1) == 'f' && input.charAt(x+2) == ' '){
+                    all[stored]="if";
+                    stored++;
+                } else if (input.charAt(x) == 'e' && (input.length()-x)>4 && input.charAt(x+1) == 'l' && input.charAt(x+2) == 's' && input.charAt(x+3) == 'e' && input.charAt(x-1) == ' ' && input.charAt(x+4) == ' '){
+                    for (String all1 : all) {
+                        if ("if".equals(all1)) {
+                            all[stored]="else";
+                            stored++;
 
+                        }       
+                    }
+                }
+            } catch(ArrayIndexOutOfBoundsException exception) {
+                return false;
+            }
+        }
+        
+        for (int x = 0; x < stored; x++){
+            
+                System.out.print(all[x] + " ");
+        }
+        
+        
+        return false;
+    
+        
 
-
-
+        */
     }
 
     public static void main(String[] args) {
