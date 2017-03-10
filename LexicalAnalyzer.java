@@ -33,20 +33,34 @@ public class LexicalAnalyzer {
         System.out.println("SUDO LEXICAL ANALYZER: RESERVED WORDS");
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
-        char inputTok[];
+
+
+        String inputTok="";
 
         ArrayList inputList = new ArrayList();
 
-        for(int i=0 ; i < input.length() ; i++){
+        for(int i=0, j=i+1; i < input.length() ; i++){
 
-            while(input.charAt(i) != ' '){
-                //inputTok = input.charAt(i);
-            }
+
+        inputTok += input.charAt(i);
+
+
+
+         if(input.charAt(i)==' '){
+             inputList.add(inputTok);
+             inputTok="";
+
 
         }
 
-       System.out.println(IsReservedWord(input));
 
+        }
+
+        System.out.println(inputList);
+
+        for(int i=0 ; i < inputList.size() ; i++){
+         System.out.println(IsReservedWord(inputList.get(i).toString().trim()));
+        }
 
     }
 
